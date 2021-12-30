@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "bhcha"
+title                    : "개발자로 거듭나기"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "bhcha"
