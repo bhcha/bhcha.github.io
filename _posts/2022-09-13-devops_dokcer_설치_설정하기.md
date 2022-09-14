@@ -68,7 +68,9 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 
 여기까지 설치가 완료 되었다. 다음번엔 gitlab에 대해 알아보자.
+도커에 대해 3페이지 정도 분량으로 잘 정리되어 있는 블로그가 있으니 한번 읽어보면 좋을것 같다.
 
+https://tech.cloudmt.co.kr/2022/06/29/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%9D%98-%EC%9D%B4%ED%95%B4-1-3-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%82%AC%EC%9A%A9%EB%B2%95/
 
 
 
