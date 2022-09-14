@@ -7,7 +7,6 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 
 ## 1. Centos에 Gitlab 설치하기
-- - -
 ###1.1 Docker Gitlab Container 구축
 <pre>
 a. 도커 이미지검색
@@ -58,7 +57,6 @@ e. 컨테이너 접속(중요)
 Gitlab, Docker 설치가 완료되었다. 
 
 ## 2. 도입기능 검토
-- - -
 이제부터 해야될것을 다시 보고 어떤것들이 필요한지 한번 생각해보자.
 ### 2.1 DB에 운영자가 직접 접근 가능
 <pre>
@@ -84,7 +82,6 @@ Gitlab, Docker 설치가 완료되었다.
 
 
 ## 3. Gitlab 초기 설정하기
-- - -
 초기설정관련하여 아주 정리가 잘되어 있는 블로그가 있다.
 
 https://wikidocs.net/16279

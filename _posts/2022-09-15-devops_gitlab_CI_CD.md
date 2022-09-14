@@ -5,34 +5,25 @@ categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 ---
 
+## 1. CI/CD란?
+<hr>
+지속적 통합(Continuous integration)/지속적 배포(Continuous Deployment)의 약어로 문자그대로의 의미이다.
 
-## 1. Centos에 Gitlab 설치하기
-- - -
-###1.1 Docker Gitlab Container 구축
+* 혹자는 지속적 개발(Continuous Develop)까지 포함된다 한다.
+
+개념 설명을 한번도 안하다가 갑자기 하는것은 해당 개념을 통해 당면한 문제를 해결하기 때문이다.
+devops포스팅에서 다루고 있는 Gitlab은 현재 점유율1위로 CI/CD기능을 폭넓게 쓸수 있는 툴이다.
+문제를 Gitlab CI/CD를 통해 해결해보자.
+
+
+## 2. Gitlab CI/CD 사전준비
+###2.1 Gitlab runner 설치
 <pre>
-a. 도커 이미지검색
-    docker search gitlab/gitlab-ce
+a. repository 추가
+    curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
 
-b. gitlab 내려받기
-    docker pull gitlab/gitlab-ce
-
-c. gitlab 실행
-    docker run --detach \
-      --hostname gitlab.dcm.com \
-      --publish localhost:4000:80 \
-      --name gitlab \
-      --restart always \
-      --add-host host.docker.internal:host-gateway \
-      --volume $GITLAB_HOME/config:/etc/gitlab \
-      --volume $GITLAB_HOME/logs:/var/log/gitlab \
-      --volume $GITLAB_HOME/data:/var/opt/gitlab \
-      --shm-size 256m \
-      gitlab/gitlab-ce
-
-
-d. 컨테이너 실행상태 확인
-    docker ps
-
-e. gitlab 접속하여 확인
-    localhost:4000
+b. gitlab-runner 설치
+    apt install gitlab-runner
 </pre>
+
+###

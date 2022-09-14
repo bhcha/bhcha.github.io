@@ -22,7 +22,6 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 하나씩 적용해보기로 했다.
 
 ## 1. 환경이해하기
-- - -
 아래는 필자가 다니고 있는 회사의 환경이다.
 
 [이미지]
@@ -41,7 +40,6 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 </pre>
 
 ## 2. Centos에 Docker 설치하기
-- - -
 
 이부분은 많은 블로그들에 잘정리되어 있으니 빠르게 넘어가자.
 참고했던 블로그 위주로 정리하겠다. 
