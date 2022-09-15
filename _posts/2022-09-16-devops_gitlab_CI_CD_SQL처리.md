@@ -135,3 +135,4 @@ Case 2. Docker sqlplus 실행
      예)test!1234 입력시 bash: !1234: event not found 이런메세지가 리턴되며 실행이 되지않는다.
 </pre>
 
+글이 너무 길어져서 sql을 실행시키는 CI/CD 설정은 다음포스팅에서 알아보자.
