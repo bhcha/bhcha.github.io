@@ -1,14 +1,13 @@
 ---
 layout: single
-title: DevOps_Gitlab CI/CD로 SQL 처리 사전처리
+title: DevOps_Gitlab CI/CD로 SQL 처리 셋팅
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, oracle sql, sqlplus 설치]
 ---
 
 
 ## 1. CI/CD활용
-일반적으로 CI/CD를 활용해서 가장 많이 쓰는 기능은 개발서버 배포->테스트->Merge->운영서버 배포가 아닐까 싶다.
-이 작업도 하긴 해야되지만 지금당장 급하지 않으니 지금 남아있는 문제중 가장 번거로운 작업인 sql처리를 해보자.
+ 
 
 ### 1.1 현상황
 운영자가 DB Tool을 이용하여 운영DB에 접속할수 있고 DML, DDL등 모든게 접근 가능한 상황. 이를 지적받아 앞으로는
@@ -130,19 +129,9 @@ Case 2. Docker sqlplus 실행
 
 ### 1.5 Sqlplus 원격접속
 <pre>
-   a. 원격접속 테스트
-   sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID]
+   sqlplus [ID]/[PASSWORD]@\"[IP]:1521/[SID]\"
    * 특수문자가 있다면 반드시 \를 넣어줘야 한다.(password포함)
      예)test!1234 입력시 bash: !1234: event not found 이런메세지가 리턴되며 실행이 되지않는다.
-
-   b. Test Sql 작성
-   vi test.sql > select 1 from dual; > :wq(저장)
-
-   c. 원격접속후 sql실행
-   sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID] @test.sql
-   <img src="../images/img_28.png"/>
-
-   성공!
 </pre>
 
 글이 너무 길어져서 sql을 실행시키는 CI/CD 설정은 다음포스팅에서 알아보자.
