@@ -32,17 +32,16 @@ a. gitlab project 설정확인
    gitlab 접속(localhost:4000) > Project 선택 > 왼쪽상단 Menu 선택 > Settings 메뉴 > CI/CD > Runner Expand 
 </pre>
 [그림1] Gitlab CI/CD Runners 정보 확인
-![img.png](../images/devops/img_4.png)
+![img.png](devops/images/img_4.png)
 
 <pre>
 b. gitlab-runner 등록
     gitlab-runner register
 </pre>
 [그림1]을  보고 아래와 같이 입력
-![img.png](images/devops/img_5.png)
+![img.png](devops/images/img_5.png)
 
 다시 Gitlab CI/CD Runners 정보로 돌아가보면 아래와같이 초록불을 확인 할 수 있다.
-![](../images/devops/img_6.png)
+![](devops/images/img_6.png)
 
-![](../images/img_1.png)
 ###
