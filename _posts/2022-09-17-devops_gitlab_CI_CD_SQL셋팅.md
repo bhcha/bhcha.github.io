@@ -6,12 +6,19 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, oracle sql, sqlplus �
 ---
 
 
-## 1. CI/CD활용
- 
+## 1. 정리하기
+지금까지 작업내용을 정리해보자.
+gitlab runner를 통해 CI/CD로 shell을 동작시키는걸 확인했고 sqlplus를 이용해 sql을 실행시키는것 까지
+완료 했다. 이것들을 정리하면 
+
+프로세스중 <span style="color:red">Job을 통해 개발서버에 자동실행</span> 요건이 충족된것 같다.
+
+> 운영자가 sql파일 작성/커밋 -> <span style="color:red">Job을 통해 개발서버에 자동실행</span> -> 테스트 성공시 -> DBA가 Merge 수행 -> 운영테스트
+
+
 
 ### 1.1 현상황
-운영자가 DB Tool을 이용하여 운영DB에 접속할수 있고 DML, DDL등 모든게 접근 가능한 상황. 이를 지적받아 앞으로는
-DBA가 모든 작업을 맡아야 함.
+
 
 ### 1.2 문제점
 DBA가 DML을 처리하기 위해서는 아래와 같은 프로세스를 수행해야한다.
