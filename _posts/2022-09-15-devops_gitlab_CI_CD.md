@@ -6,7 +6,6 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 ---
 
 ## 1. CI/CD란?
-<hr>
 지속적 통합(Continuous integration)/지속적 배포(Continuous Deployment)의 약어로 문자그대로의 의미이다.
 
 * 혹자는 지속적 개발(Continuous Develop)까지 포함된다 한다.
@@ -32,16 +31,15 @@ a. gitlab project 설정확인
    gitlab 접속(localhost:4000) > Project 선택 > 왼쪽상단 Menu 선택 > Settings 메뉴 > CI/CD > Runner Expand 
 </pre>
 [그림1] Gitlab CI/CD Runners 정보 확인
-![img.png](devops/images/img_4.png)
+![img.png](../devops/images/img_4.png)
 
 <pre>
 b. gitlab-runner 등록
     gitlab-runner register
 </pre>
 [그림1]을  보고 아래와 같이 입력
-![img.png](devops/images/img_5.png)
+![img.png](../devops/images/img_5.png)
 
 다시 Gitlab CI/CD Runners 정보로 돌아가보면 아래와같이 초록불을 확인 할 수 있다.
-![](devops/images/img_6.png)
+![](../devops/images/img_6.png)
 
-###
