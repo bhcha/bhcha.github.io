@@ -43,5 +43,6 @@ b. gitlab-runner 등록
 
 다시 Gitlab CI/CD Runners 정보로 돌아가보면 아래와같이 초록불을 확인 할 수 있다.
 ![](../images/devops/img_6.png)
+
 ![](../images/img_1.png)
 ###

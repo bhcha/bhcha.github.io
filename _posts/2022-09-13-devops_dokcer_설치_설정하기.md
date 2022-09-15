@@ -48,7 +48,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 그래서 docker도 맛볼겸 써보기로 했다.
 
 
-###2.1 Centos에 Docker 설치
+### 2.1 Centos에 Docker 설치
     a. Yum-utils 업데이트 
         yum install -y yum-utils
 
