@@ -17,7 +17,7 @@ devops포스팅에서 다루고 있는 Gitlab은 현재 점유율1위로 CI/CD�
 
 
 ## 2. Gitlab CI/CD 사전준비
-###2.1 Gitlab runner 설치
+### 2.1 Gitlab runner 설치
 <pre>
 a. repository 추가
     curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
@@ -26,7 +26,7 @@ b. gitlab-runner 설치
     apt install gitlab-runner
 </pre>
 
-###2.2 Gitlab runner 등록
+### 2.2 Gitlab runner 등록
 <pre>
 a. gitlab project 설정확인
    gitlab 접속(localhost:4000) > Project 선택 > 왼쪽상단 Menu 선택 > Settings 메뉴 > CI/CD > Runner Expand 
@@ -42,6 +42,6 @@ b. gitlab-runner 등록
 ![img.png](images/devops/img_5.png)
 
 다시 Gitlab CI/CD Runners 정보로 돌아가보면 아래와같이 초록불을 확인 할 수 있다.
-![img.png](images/devops/img_6.png)
-
+![](../images/devops/img_6.png)
+![](../images/img_1.png)
 ###
