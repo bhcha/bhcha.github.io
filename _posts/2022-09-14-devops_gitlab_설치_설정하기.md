@@ -5,6 +5,9 @@ categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 ---
 
+> 해당작업은 Container 운영에 대한 이해도가 없이 진행하다 보니 다하고 뒤엎었다. 결국 docker-compose로 
+> 작업했으니 바쁘신분들은 Docker-compose에 대한 포스팅을 보길 바란다.
+
 
 ## 1. Centos에 Gitlab 설치하기
 ### 1.1 Docker Gitlab Container 구축
@@ -89,7 +92,7 @@ https://wikidocs.net/16279
 * 해당 블로그에서 주의해야 할점은 firewall관련 설정인데 <span style="color:#ff3d3d">아래와 같은 메세지가 뜨면 사용하고 있지 않다</span>는것이다. 
 사용하고 있지 않은 상태에서 해당 메세지를 해결하기 위해 방화벽을 켰을시 기존에 사용중이던 시스템이 블락될수도 있다. 서버관리자가 아니라면 섣불리 켜지 말자.
 ![](../images/firewall.png)
-* 해당 블로그 내용은 docker에 설치하는것이 아니라 설정이 조금 다를수 있다.
+* 해당 블로그 내용은 docker에 설치하는것이 아니라 조금 다를수 있다.
 
 아래 내용들은 필요한 부분만 정라한것이다.
 Gitlab 설치가 끝나면 Gitlab Container로 접속하자.
@@ -103,35 +106,69 @@ docker exec -it gitlab /bin/bash
 vi /etc/gitlab/initial_root_password
 </pre>
 
-
-### 3.1 메일전송 에이전트 POSTFIX 설치하기
-apt저장소를 업데이트 하자.
+만약 파일을 찾을수 없다면 아래 명령어로 root 패스워드를 초기화해주자.
 <pre>
-apt-get update
+a. gitlab console창 실행
+   gitlab-rails console -e production
+   ....조금기다리기....
+b. 첫번째 유저 찾기
+   user = User.where(id: 1).first
+c. 비밀번호 설정
+   user.password='변경할비밀번호'
+   user.password_confirmation='변경할비밀번호'
+d. 저장
+   user.save
 </pre>
 
-postfix를 설차하자.
-<pre>
-apt-get install mailutils
-</pre>
+[//]: # ( ### 3.1 메일전송 에이전트 POSTFIX 설치하기)
 
-아래와 같은 설정이 나오는데 따라해보자.
-<pre>
-2. Internet Site 
-</pre>
-![](../images/img.png)
+[//]: # (#apt저장소를 업데이트 하자.)
 
-<pre>
-hostname 입력 
-</pre>
-![img_1.png](../images/img_1.png)
-설정이 잘못되었으면 아래 명령어를 입력해 다시 설정하자.
-<pre>
-dpkg-reconfigure postfix
-</pre>
+[//]: # (<pre>)
 
-### 3.2 인증메일 설정하기
-#### 3.2.1 설정파일 확인하기
+[//]: # (apt-get update)
+
+[//]: # (</pre>)
+
+[//]: # ()
+[//]: # (postfix를 설차하자.)
+
+[//]: # (<pre>)
+
+[//]: # (apt-get install mailutils)
+
+[//]: # (</pre>)
+
+[//]: # ()
+[//]: # (아래와 같은 설정이 나오는데 따라해보자.)
+
+[//]: # (<pre>)
+
+[//]: # (2. Internet Site )
+
+[//]: # (</pre>)
+
+[//]: # (![]&#40;../images/img.png&#41;)
+
+[//]: # ()
+[//]: # (<pre>)
+
+[//]: # (hostname 입력 )
+
+[//]: # (</pre>)
+
+[//]: # (![img_1.png]&#40;../images/img_1.png&#41;)
+
+[//]: # (설정이 잘못되었으면 아래 명령어를 입력해 다시 설정하자.)
+
+[//]: # (<pre>)
+
+[//]: # (dpkg-reconfigure postfix)
+
+[//]: # (</pre>)
+
+### 3.1 인증메일 설정하기
+#### 3.1.1 설정파일 확인하기
 <pre>
 vi /etc/gitlab/gitlab.rb
 </pre>
@@ -146,17 +183,16 @@ vi /etc/gitlab/gitlab.rb
 회사내 구글계정을 쓰고 싶은데 문제는 2차인증이 필요한 서비스라 이것도 불가능하다.
 그래서 결국 내 정보를 가지고 우리 파트 계정을 새로 생성하기로했다.
 
-~~내가 그만두면서 어떻게 넘겨받을지 생각은 한건지 모르겠다.~~
 
 
-#### 3.2.1 구글 SMTP 설정(번외)
+#### 3.1.2 구글 SMTP 설정(번외)
 <pre>
 1. 구글 계정생성->2차인증설정
 2. 계정설정->보안>앱비밀번호->기기용 앱 비밀번호 설정
 </pre>
 
 
-#### 3.2.3 설정파일에 SMTP설정하기
+#### 3.1.3 설정파일에 SMTP설정하기
 위 과정을 마치면 위 설정을 아래와 같이 바꿔보자.
 <pre>
 1. #(주석)제거

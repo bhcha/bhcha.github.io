@@ -7,7 +7,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 
 
-> 아무도 안하는 상황에서 너무 불편하고 짜증나서 마지못해 하게 되었지 전문가가 아니기 때문에 감안하고 보시기 바랍니다.
+> 필자는 Devops를 처음해본다. 끼워 맞추기 정도의 수준이니 감안하고 보기 바란다.
 
 
 현 회사에서 처음으로 '내부통제' 라는것을 만나게 되었다.
@@ -25,19 +25,17 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 아래는 필자가 다니고 있는 회사의 환경이다.
 
 [이미지]
-<pre>
+
 - 서버구성 : 개발서버(SVN, Jekins, 개발DB), 이중화된 운영서버, DB운영서버
 - OS : centos
 - DB : Oracle
-</pre>
 
 여기서 내부통제관련 문제가 되는 부분과 추가도입 내용은 아래와 같다. 
-<pre>
 - DB서버에 운영자가 직접적으로 접근 가능하다는것
 - Jekins의 사용자 암호 보안정책
 - Jekins의 권한관리
 - git 도입
-</pre>
+
 
 ## 2. Centos에 Docker 설치하기
 
@@ -65,7 +63,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
         systemctl enable docker
 
 
-여기까지 설치가 완료 되었다. 다음번엔 gitlab에 대해 알아보자.
+여기까지 설치가 완료 되었다. 
 도커에 대해 3페이지 정도 분량으로 잘 정리되어 있는 블로그가 있으니 한번 읽어보면 좋을것 같다.
 
 https://tech.cloudmt.co.kr/2022/06/29/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%9D%98-%EC%9D%B4%ED%95%B4-1-3-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%82%AC%EC%9A%A9%EB%B2%95/

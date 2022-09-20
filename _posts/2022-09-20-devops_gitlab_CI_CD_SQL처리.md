@@ -1,10 +1,13 @@
 ---
 layout: single
-title: DevOps_Gitlab CI/CD로 SQL 처리 사전처리
+title: DevOps_Gitlab CI/CD로 SQL 처리
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, oracle sql, sqlplus 설치]
 ---
 
+
+> 여기까지 작업하고 보니 컨테이너를 전혀 활용하지 못하고 있었다. 모놀리식 아키텍쳐에 익숙해져 있어서 그런지 MSA아키텍쳐를 전혀 활용하지 못했다.
+> 다음 포스팅은 Docker-compose를 이용해 서비스를 각각의 컨테이너로 구축해보도록 한다.
 
 ## 1. CI/CD활용
 일반적으로 CI/CD를 활용해서 가장 많이 쓰는 기능은 개발서버 배포->테스트->Merge->운영서버 배포가 아닐까 싶다.
@@ -144,5 +147,3 @@ Case 2. Docker sqlplus 실행
 
    성공!
 </pre>
-
-글이 너무 길어져서 sql을 실행시키는 CI/CD 설정은 다음포스팅에서 알아보자.
