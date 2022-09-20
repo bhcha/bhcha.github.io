@@ -7,6 +7,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 > 해당작업은 Container 운영에 대한 이해도가 없이 진행하다 보니 다하고 뒤엎었다. 결국 docker-compose로 
 > 작업했으니 바쁘신분들은 Docker-compose에 대한 포스팅을 보길 바란다.
+> https://bhcha.github.io/devops/devops_gitlab_compose%ED%99%9C%EC%9A%A9/
 
 
 ## 1. Centos에 Gitlab 설치하기
