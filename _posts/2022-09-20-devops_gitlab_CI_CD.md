@@ -12,12 +12,12 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 개념 설명을 한번도 안하다가 갑자기 하는것은 해당 개념을 통해 당면한 문제를 해결하기 때문이다.
 devops포스팅에서 다루고 있는 Gitlab은 현재 점유율1위로 CI/CD기능을 폭넓게 쓸수 있는 툴이다.
-문제를 Gitlab CI/CD를 통해 해결해보자..
+문제를 Gitlab CI/CD를 통해 해결해보자.
 
 
 ## 2. Gitlab CI/CD 사전준비
 ### 2.1 Gitlab runner 설치
-<code>
+```linux
 일반적인 cenos환경에서는 아래와 같이 진행하면 된다. 
 필자는 docker compose를 통해 진행했으니 넘어가야되면 된다.
 a. repository 추가
@@ -28,7 +28,7 @@ b. gitlab-runner 설치
 
 c. gitlab-runner 서비스등록
     service gitlab-runner start 
-</code>
+```
 
 ### 2.2 Gitlab runner 등록
 <pre>
