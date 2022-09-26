@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 느즈막히 git 시작
+title: 느즈막히 시작하는 git(local)
 categories: beginner
 tag: [git, sourcetree]
 ---
@@ -13,6 +13,7 @@ git은 '분산 버전관리 시스템'이다. 또는 이러한 명령어를 가�
 이전 SVN 등과 같은 저장소 관리 시스템들이 있었는데 모든 버전관리시스템을 이길수 있었던 이유는 분산 덕분이라고 볼 수 있다.
 
 * git은 저장소 버전관리 시스템이다. 분산을 곁들인...
+
 
 ## 2. git 시작하기(command)
 git이 설치되어 있다고 보고 시작해보자.
@@ -52,14 +53,16 @@ b. Staging area로 이동
    git add [폴더 or 파일]
    
    // 현재 폴더 이하 전체 모든 변경내용 [폴더 or 파일]
-   $ git add . 
+   $ git add .
+    
    // 전체 변경된 모든내용 [폴더 or 파일]
-   $ git add -A 
+   $ git add -A
+    
    // 현재 폴더에 있는 gittest.txt 파일  
    $ git add gittest.txt
+   
    // 뭐가 바꼈는지 하나씩 확인하면서 파일 add
    $ git add -p
-   
    * perl 패키지 필요
         
 c. Staging area에서 내리기
@@ -83,10 +86,12 @@ f. 변경(commit) 상태 확인
 d. 변경(commit) 상태 되돌리기 
    // [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
    $ git reset --soft HEAD^
+   
    // [방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
    $ git reset --mixed HEAD^ // 기본 옵션
    $ git reset HEAD^ // 위와 동일
    $ git reset HEAD~2 // 마지막 2개의 commit을 취소
+   
    // [방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
    $ git reset --hard HEAD^
    
@@ -97,6 +102,8 @@ e. 최종 변경(commit) 메세지 변경
 ```
 
 ### 2.3 local에서 브런치 관리
+<img src="../images/img8.gif"/>
+
 ```
 a. 브런치 생성
    git branch [브런치명]
