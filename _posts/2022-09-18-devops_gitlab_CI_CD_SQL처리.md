@@ -46,7 +46,7 @@ c. sql을 실행시킬 job
 
 ### 1.4 Docker Sqlplus 활용
 현재 환경은 아래와 같이 구성되어 있다.
-![](../images/img_17.png)
+<img src="../images/img_17.png"/>
 
 Case 1. Docker에서 Host Sqlplus활용
 
@@ -65,8 +65,8 @@ a. Host 연결
 
 b. ssh 연결 테스트(Docker)
    - 도커 커맨드라인 연결
-     docker exec -it gitlab /bin/bash 
-   - ssh root/root1234@host.docker.internal
+     $ docker exec -it gitlab /bin/bash 
+   - $ ssh root/root1234@host.docker.internal
      <img src="../images/img_19.png"/>
      root 비밀번호를 기재하였음에도 비밀번호를 물어본다.
 
@@ -75,25 +75,25 @@ b. ssh 연결 테스트(Docker)
 
 c. ssh 비밀번호 없이 연결
    - 공개키 생성(Docker)
-     ssh-keygen -t rsa
+     $ ssh-keygen -t rsa
      * 질문들에 대해서 다 Enter로 넘어가자.
    - 공개키 생성(Docker)
-     ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa
+     $ ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa
      * 덮어쓸거냐고 물어보면 y
    - 공개키를 Host로 전송(Docker)
-     scp /root/.ssh/id_rsa.pub root@host.docker.internal:/root/id_rsa.pub
+     $ scp /root/.ssh/id_rsa.pub root@host.docker.internal:/root/id_rsa.pub
    - 공개키 등록(Host)
-     mkdir /root/.ssh
-     chmod 700 /root/.ssh
-     touch /root/.ssh/authorized_keys
-     chmod 644 /root/.ssh/authorized_keys
-     cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
+     $ mkdir /root/.ssh
+     $ chmod 700 /root/.ssh
+     $ touch /root/.ssh/authorized_keys
+     $ chmod 644 /root/.ssh/authorized_keys
+     $ cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
      <img src="../images/img_20.png"/>
 
 d. 다시 접속 테스트
    <img src="../images/img_21.png"/>
    그러면 ssh를 통해서 커맨드를 날려보자.
-   ssh root/root1234@host.docker.internal ls
+   $ ssh root/root1234@host.docker.internal ls
    정상적으로 목록이 조회되는것을 확인할 수 있다. 그러면 여기에 sqlplus만 실행하면 끝!
    인줄 알았으나 커맨드를 찾을수 없다고 나온다. 
    <img src="../images/img_22.png"/>
@@ -104,30 +104,30 @@ d. 다시 접속 테스트
    이런 메세지가 나타나며 실패했다. 환경변수가 셋팅도 제대로 되어있는데 끝끝내 성공하지 못했다.
 </pre>
 
-Case 2. Docker sqlplus 실행
+Case 2. Docker sqlplus 설치
 <pre>
-   일반적인 Docker 구성은 gitlab과 같은 컨테이너 구성, Oracle 컨테이너 구성 이런식으로 알고 있다.
-   하지만 현재 셋팅되어 있는 구성을 변경할수 없어 최대한 있는그대로 해야되는 상황.
-   결국 타협하여 Gitlab Container에 sqplus를 설치했다.
+일반적인 Docker 구성은 gitlab과 같은 컨테이너 구성, Oracle 컨테이너 구성 이런식으로 알고 있다.
+하지만 현재 셋팅되어 있는 구성을 변경할수 없어 최대한 있는그대로 해야되는 상황.
+결국 타협하여 Gitlab Container에 sqplus를 설치했다.
 
    a. Basic Package 다운로드 
-      wget https://download.oracle.com/otn_software/linux/instantclient/214000/instantclient-basic-linux.x64-21.4.0.0.0dbru.zip
+      $ wget https://download.oracle.com/otn_software/linux/instantclient/214000/instantclient-basic-linux.x64-21.4.0.0.0dbru.zip
    b. splplus Package 다운로드 
-      wget https://download.oracle.com/otn_software/linux/instantclient/214000/instantclient-sqlplus-linux.x64-21.4.0.0.0dbru.zip
+      $ wget https://download.oracle.com/otn_software/linux/instantclient/214000/instantclient-sqlplus-linux.x64-21.4.0.0.0dbru.zip
    c. 폴더생성
-      mkdir -p /opt/oracle
+      $ mkdir -p /opt/oracle
    d. 패키지 압축해제
-      unzip -d /opt/oracle instantclient-basic-linux.x64-21.4.0.0.0dbru.zip
-      unzip -d /opt/oracle instantclient-sqlplus-linux.x64-21.4.0.0.0dbru.zip
+      $ unzip -d /opt/oracle instantclient-basic-linux.x64-21.4.0.0.0dbru.zip
+      $ unzip -d /opt/oracle instantclient-sqlplus-linux.x64-21.4.0.0.0dbru.zip
    e. 환경변수 등록
-      cd /opt/oracle/instantclient_21_4 && find . -type f | sort
-      export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_4:$LD_LIBRARY_PATH
-      export PATH=$LD_LIBRARY_PATH:$PATH
-      source ~/.bashrc
+      $ cd /opt/oracle/instantclient_21_4 && find . -type f | sort
+      $ export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_4:$ LD_LIBRARY_PATH
+      $ export PATH=$ LD_LIBRARY_PATH:$ PATH
+      $ source ~/.bashrc
    f. sqlplus 실행(실패)
       <img src="../images/img_25.png"/>
    g. 당황하지 말고 libaio 설치
-      apt-get install libaio1 libaio-dev
+      $ apt-get install libaio1 libaio-dev
    h. sqlplus 실행(성공)
       <img src="../images/img_26.png"/>
 </pre>
@@ -135,15 +135,15 @@ Case 2. Docker sqlplus 실행
 ### 1.5 Sqlplus 원격접속
 <pre>
    a. 원격접속 테스트
-   sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID]
+   $ sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID]
    * 특수문자가 있다면 반드시 \를 넣어줘야 한다.(password포함)
      예)test!1234 입력시 bash: !1234: event not found 이런메세지가 리턴되며 실행이 되지않는다.
 
    b. Test Sql 작성
-   vi test.sql > select 1 from dual; > :wq(저장)
+   $ vi test.sql > select 1 from dual; > :wq(저장)
 
    c. 원격접속후 sql실행
-   sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID] @test.sql
+   $ sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID] @test.sql
    <img src="../images/img_28.png"/>
 
    성공!

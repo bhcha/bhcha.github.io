@@ -92,33 +92,33 @@ https://wikidocs.net/16279
 
 * 해당 블로그에서 주의해야 할점은 firewall관련 설정인데 <span style="color:#ff3d3d">아래와 같은 메세지가 뜨면 사용하고 있지 않다</span>는것이다. 
 사용하고 있지 않은 상태에서 해당 메세지를 해결하기 위해 방화벽을 켰을시 기존에 사용중이던 시스템이 블락될수도 있다. 서버관리자가 아니라면 섣불리 켜지 말자.
-![](../images/firewall.png)
+<img src="../images/firewall.png"/>
 * 해당 블로그 내용은 docker에 설치하는것이 아니라 조금 다를수 있다.
 
 아래 내용들은 필요한 부분만 정라한것이다.
 Gitlab 설치가 끝나면 Gitlab Container로 접속하자.
 
 <pre>
-docker exec -it gitlab /bin/bash
+  $ docker exec -it gitlab /bin/bash
 </pre>
 
 최초 비밀번호는 아래 파일에 기재되어 있다.
 <pre>
-vi /etc/gitlab/initial_root_password
+  $ vi /etc/gitlab/initial_root_password
 </pre>
 
 만약 파일을 찾을수 없다면 아래 명령어로 root 패스워드를 초기화해주자.
 <pre>
 a. gitlab console창 실행
-   gitlab-rails console -e production
-   ....조금기다리기....
+   $ gitlab-rails console -e production
+   //....조금기다리기....
 b. 첫번째 유저 찾기
-   user = User.where(id: 1).first
+   #user = User.where(id: 1).first
 c. 비밀번호 설정
-   user.password='변경할비밀번호'
-   user.password_confirmation='변경할비밀번호'
+   #user.password='변경할비밀번호'
+   #user.password_confirmation='변경할비밀번호'
 d. 저장
-   user.save
+   #user.save
 </pre>
 
 [//]: # ( ### 3.1 메일전송 에이전트 POSTFIX 설치하기)
@@ -175,10 +175,8 @@ vi /etc/gitlab/gitlab.rb
 </pre>
 
 아래로 내리다보면 smtp 관련 설정을 확인할 수 있다.
-![](../images/gitlab_smtp.png)
-
+<img src="../images/gitlab_smtp.png"/>
 여기에 회사 SMTP서버를 기재하면 되는데,,,,,SMTP 서버를 관리하는 부서에서 제공을 안해준다.
-~~회사에서 쓰는거 설정하는거라고,,,~~
 
 깔끔하게 포기하고 구글 SMTP를 이용해보자.
 회사내 구글계정을 쓰고 싶은데 문제는 2차인증이 필요한 서비스라 이것도 불가능하다.
@@ -200,25 +198,25 @@ vi /etc/gitlab/gitlab.rb
 2. 나머지는 똑같이 작성
 3. smtp_password 부분은 기기용 앱 비밀번호를 기재
 </pre>
-![](../images/gitlab_smtp_set.png)
+<img src="../images/gitlab_smtp_set.png"/>
 
 설정을 반영해보자.
 <pre>
-gitlab-ctl reconfigure
+$ gitlab-ctl reconfigure
 </pre>
 
 제대로 설정이 되었는지 메일을 발송해보자.
 <pre>
-gitlab-rails console
+$ gitlab-rails console
 </pre>
 위 명령어 입력후 수초에서 수분정도 기다리면 아래와 같은 커맨드 입력 창이 나타난다.
-![img_2.png](../images/img_2.png)
+<img src="../images/img_2.png"/>
 아래와 같이 입력!
 <pre>
-Notify.test_email('example@gmail.com', 'GitLab 메일링 테스트입니다', 'GitLab SMTP를 수정하였기에 메일링 테스트를 진행합니다.').deliver_now
+# Notify.test_email('example@gmail.com', 'GitLab 메일링 테스트입니다', 'GitLab SMTP를 수정하였기에 메일링 테스트를 진행합니다.').deliver_now
 </pre>
 성공적으로 발송되었다.
-![img_3.png](../images/img_3.png)
+<img src="../images/img_3.png"/>
 
 여기까지 완료되었다면 사용자 가입시 인증메일이 발송되고 관리자가 인증하는 프로세스가 추가된것이다.
 [도입기능 검토](#2-도입기능-검토)내용중 암호화 정책관련 내용이 어느정도 해소되었다.

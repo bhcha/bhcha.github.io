@@ -48,26 +48,27 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 
 ### 2.1 Centos에 Docker 설치
     a. Yum-utils 업데이트 
-        yum install -y yum-utils
+        $ yum install -y yum-utils
 
     b. Docker-ce 레포 추가
-        yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+        $ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
     c. Docker 설치
-        yum install docker-ce docker-ce-cli containerd.io -y
+        $ yum install docker-ce docker-ce-cli containerd.io -y
 
     d. Docker 시작
-        systemctl start docker
+        $ systemctl start docker
 
     e. Docker 서비스등록
-        systemctl enable docker
+        $ systemctl enable docker
 
 
 여기까지 설치가 완료 되었다. 
-도커에 대해 3페이지 정도 분량으로 잘 정리되어 있는 블로그가 있으니 한번 읽어보면 좋을것 같다.
+도커에 대해 3페이지 정도 분량으로 잘 정리되어 있는 [블로그][2] 가 있으니 한번 읽어보면 좋을것 같다.
 
-https://tech.cloudmt.co.kr/2022/06/29/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%9D%98-%EC%9D%B4%ED%95%B4-1-3-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%82%AC%EC%9A%A9%EB%B2%95/
+
 
 
 
 [1]: https://namu.wiki/w/%EB%8D%98%EC%A0%84%EC%95%A4%ED%8C%8C%EC%9D%B4%ED%84%B0%20%EC%A7%81%EC%9B%90%20%EA%B6%8C%ED%95%9C%20%EB%82%A8%EC%9A%A9%20%EB%85%BC%EB%9E%80
+[2]: https://tech.cloudmt.co.kr/2022/06/29/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%9D%98-%EC%9D%B4%ED%95%B4-1-3-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%82%AC%EC%9A%A9%EB%B2%95/
