@@ -113,12 +113,12 @@ a. gitlab console창 실행
    $ gitlab-rails console -e production
    //....조금기다리기....
 b. 첫번째 유저 찾기
-   #user = User.where(id: 1).first
+   # user = User.where(id: 1).first
 c. 비밀번호 설정
-   #user.password='변경할비밀번호'
-   #user.password_confirmation='변경할비밀번호'
+   # user.password='변경할비밀번호'
+   # user.password_confirmation='변경할비밀번호'
 d. 저장
-   #user.save
+   # user.save
 </pre>
 
 [//]: # ( ### 3.1 메일전송 에이전트 POSTFIX 설치하기)

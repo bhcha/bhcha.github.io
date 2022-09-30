@@ -158,7 +158,6 @@ a. docker-compose.yml 파일 열기
 b. docker-compose.yml 내용 추가
    [...생략]
   gitlab-runner:
-    #image: 'gitlab/gitlab-runner:v14.6.1'
     build: ./gitlab-runner
     container_name: gitlab-runner
     restart: always

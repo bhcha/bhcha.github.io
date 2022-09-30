@@ -20,7 +20,7 @@ git이 설치되어 있다고 보고 시작해보자.
 예제의 터미널 툴은 MobaXterm를 사용한다.
 
 ### 2.1 MobaXterm 간단한 사용법
-````
+<pre>
 <img src="../images/img.png"/>
 start local terminal 클릭
 
@@ -28,10 +28,10 @@ start local terminal 클릭
 cd /drivers/c/
 * c 드라이버로 이동
 
-````
+</pre>
 
 ### 2.2 local에서 시작하기
-```
+<pre>
 a. 폴더 생성
    mkdir [폴더명] && cd [폴더명]
    ex) mkdir gitsample && cd gitsample 
@@ -41,10 +41,10 @@ b. 저장소 생성하기
    
 c. 저장소 삭제하기
    rm -rf .git
-```
+</pre>
 
 ### 2.3 local에서 변경된 파일 관리
-```
+<pre>
 a. 파일 C or U or D
    // 수정후 저장 
    $ vi gittest.txt 
@@ -99,12 +99,12 @@ d. 변경(commit) 상태 되돌리기
    
 e. 최종 변경(commit) 메세지 변경
    $ git commit --amend
-```
+</pre>
 
 ### 2.3 local에서 브런치 관리
 <img src="../images/img8.gif"/>
 
-```
+<pre>
 a. 브런치 생성
    git branch [브런치명]
    
@@ -129,4 +129,4 @@ c. 브런치 전환하기
    $ git checkout develop
    <img src="../images/img7.png"/>
    
-```
+</pre>

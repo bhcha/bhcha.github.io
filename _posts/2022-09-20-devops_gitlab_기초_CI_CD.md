@@ -2,7 +2,7 @@
 layout: single
 title: DevOps_Gitlab CI/CD
 categories: Devops
-tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
+tag: [gitlab기초, DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 ---
 
 ## 1. CI/CD란?
@@ -85,4 +85,4 @@ i. 성공!
 
 <img src="../images/img_16.png"/>
 
-여기까지 CI/CD설정이 완료되었다. 다음번엔 해당기능을 활용하여 남아있는 문제를 처리해보자.
+여기까지 CI/CD설정이 완료되었다. 다음번엔 해당기능을 활용 해보자.
