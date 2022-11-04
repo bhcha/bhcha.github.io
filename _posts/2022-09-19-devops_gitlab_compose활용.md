@@ -16,6 +16,11 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, docker compose]
 <pre>
 a. Docker Compose 설치
    $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$ (uname -s)-$ (uname -m)" -o /usr/local/bin/docker-compose
+
+   * 위 url로 했을시 아래와 같이 안될때가 있다 그럴때는 아래 url로 설치해보자
+   <img src="../images/img_41.png"/>
+   $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
 b. 권한부여
    $ chmod +x /usr/local/bin/docker-compose
 c. 심볼릭 링크 설정

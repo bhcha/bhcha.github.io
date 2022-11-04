@@ -124,7 +124,7 @@ Case 2. Docker sqlplus 설치
       $ export LD_LIBRARY_PATH=/opt/oracle/instantclient_21_4:$ LD_LIBRARY_PATH
       $ export PATH=$ LD_LIBRARY_PATH:$ PATH
       $ source ~/.bashrc
-   f. sqlplus 실행(실패)
+   f. sqlplus 실행(실패)ㄷ
       <img src="../images/img_25.png"/>
    g. 당황하지 말고 libaio 설치
       $ apt-get install libaio1 libaio-dev
