@@ -18,7 +18,7 @@ a. Docker Compose 설치
    $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$ (uname -s)-$ (uname -m)" -o /usr/local/bin/docker-compose
 
    * 위 url로 했을시 아래와 같이 안될때가 있다 그럴때는 아래 url로 설치해보자
-   <img src="../devops/images/img_41.png"/>
+   <img src="../images/devops/img_41.png"/>
    $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 b. 권한부여
@@ -149,7 +149,7 @@ d. build
 
 e. docker 이미지 확인
    $ docker images
-   <img src="../devops/images/img_30.png"/>
+   <img src="../images/devops/img_30.png"/>
 </pre>
 
 ### 2.4 docker-compose.yml 변경
@@ -191,7 +191,7 @@ $ docker-compose logs -f
 <pre>
 $ docker-compose ps
 </pre>
-<img src="../devops/images/img_29.png"/>
+<img src="../images/devops/img_29.png"/>
 
 여기까지 한번에 2가지의 컨테이너가 생성되었다.
 
