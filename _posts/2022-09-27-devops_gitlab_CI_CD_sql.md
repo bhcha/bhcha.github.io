@@ -7,7 +7,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL
 
 ## 1. gitlab CI/CD로 SQL 실행하기
 결과물부터 먼저 보시죠.
-![](../devops/images/img_31.png)
+<img src="../devops/images/img_31.png"/>
 
 ## 2. 준비물
 ### 2.1 환경

@@ -175,7 +175,7 @@ vi /etc/gitlab/gitlab.rb
 </pre>
 
 아래로 내리다보면 smtp 관련 설정을 확인할 수 있다.
-<img src="../images/gitlab_smtp.png"/>
+<img src="../devops/images/gitlab_smtp.png"/>
 여기에 회사 SMTP서버를 기재하면 되는데,,,,,SMTP 서버를 관리하는 부서에서 제공을 안해준다.
 
 깔끔하게 포기하고 구글 SMTP를 이용해보자.
@@ -198,7 +198,7 @@ vi /etc/gitlab/gitlab.rb
 2. 나머지는 똑같이 작성
 3. smtp_password 부분은 기기용 앱 비밀번호를 기재
 </pre>
-<img src="../images/gitlab_smtp_set.png"/>
+<img src="../devops/images/gitlab_smtp_set.png"/>
 
 설정을 반영해보자.
 <pre>
@@ -210,13 +210,13 @@ $ gitlab-ctl reconfigure
 $ gitlab-rails console
 </pre>
 위 명령어 입력후 수초에서 수분정도 기다리면 아래와 같은 커맨드 입력 창이 나타난다.
-<img src="../images/img_2.png"/>
+<img src="../devops/images/img_2.png"/>
 아래와 같이 입력!
 <pre>
 # Notify.test_email('example@gmail.com', 'GitLab 메일링 테스트입니다', 'GitLab SMTP를 수정하였기에 메일링 테스트를 진행합니다.').deliver_now
 </pre>
 성공적으로 발송되었다.
-<img src="../images/img_3.png"/>
+<img src="../devops/images/img_3.png"/>
 
 여기까지 완료되었다면 사용자 가입시 인증메일이 발송되고 관리자가 인증하는 프로세스가 추가된것이다.
 [도입기능 검토](#2-도입기능-검토)내용중 암호화 정책관련 내용이 어느정도 해소되었다.
