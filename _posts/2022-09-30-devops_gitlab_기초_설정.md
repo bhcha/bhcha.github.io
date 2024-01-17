@@ -11,15 +11,15 @@ gitlab을 활용해보기 앞서 기본적인 설정을 해보자.
 > 왼쪽상단위 Menu > Create new project > Create blank project > 내용입력 > Create Project
 
 ## 2. 프로젝트 멤버관리
-<img src="../images/devops/img_37.png"/>
+<img src="/images/devops/img_37.png"/>
 프로젝트 선택 > Project > Members
 
 ### 2.1 멤버 추가
-<img src="../images/devops/img_38.png"/>
+<img src="/images/devops/img_38.png"/>
 우측상단 Invite members 선택
 
 ### 2.2 멤버 role 설정
-<img src="../images/devops/img_39.png"/>
+<img src="/images/devops/img_39.png"/>
 <pre>
 // All
 Owner : 프로젝트 생성자.
@@ -43,7 +43,7 @@ Guest : 프로젝트를 직접적으로 수행하지는 않지만, 프로젝트�
 
 > 왼쪽 상단 메뉴 > Admin > Labels
 
-<img src="../images/devops/img_40.png"/>
+<img src="/images/devops/img_40.png"/>
 > 왼쪽 메뉴 > Project information > Labels
 * issue에서 사용할 Label을 설정 할 수 있다.
 * Label은 하나의 issue에 n개 설정 할 수 있다.

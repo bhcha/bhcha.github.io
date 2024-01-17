@@ -14,7 +14,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL
 
 ### 1.1 역할배분
 프로젝트를 하나 만들고 기획자에게 Maintainer 권한을 디자이너, 퍼블리셔, 개발자에게 developer 권한을 부여하자.
-<img src="../images/devops/img_36.png" /> 
+<img src="/images/devops/img_36.png" /> 
 
 ### 1.2 이슈등록
 프로젝트를 진행하던중 화면을 변경해야 하는 일이 생겼다. 기획자는 이슈를 등록하여 기록을 남기고 이를 활용하여 업무분담을 할 수 있다.

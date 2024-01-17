@@ -21,10 +21,10 @@ git이 설치되어 있다고 보고 시작해보자.
 
 ### 2.1 MobaXterm 간단한 사용법
 <pre>
-<img src="../images/git/img.png"/>
+<img src="/images/git/img.png"/>
 start local terminal 클릭
 
-<img src="../images/git/img_1.png"/>
+<img src="/images/git/img_1.png"/>
 cd /drivers/c/
 * c 드라이버로 이동
 
@@ -71,7 +71,7 @@ c. Staging area에서 내리기
    
 d. 변경 상태 확인(Staging area)
    $ git status
-   <img src="../images/git/img_2.png"/>
+   <img src="/images/git/img_2.png"/>
    // commit 된 파일의 상태는 확인되지 않는다.
    
 e. 변경(commit) 기록
@@ -81,7 +81,7 @@ e. 변경(commit) 기록
 f. 변경(commit) 상태 확인
    $ git log
    // 'test' 이런식의 commit message는 작성하지 말자.
-   <img src="../images/git/img_3.png"/>
+   <img src="/images/git/img_3.png"/>
    
 d. 변경(commit) 상태 되돌리기 
    // [방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
@@ -102,7 +102,7 @@ e. 최종 변경(commit) 메세지 변경
 </pre>
 
 ### 2.3 local에서 브런치 관리
-<img src="../images/git/img_8.gif"/>
+<img src="/images/git/img_8.gif"/>
 
 <pre>
 a. 브런치 생성
@@ -115,18 +115,18 @@ a. 브런치 생성
    
 b. 브런치 리스트 확인
    $ git branch
-   <img src="../images/git/img_4.png"/>
+   <img src="/images/git/img_4.png"/>
    
    // git branch -m develop 했을경우
-   <img src="../images/git/img_5.png"/>
+   <img src="/images/git/img_5.png"/>
    
    // git branch develop 했을경우
-   <img src="../images/git/img_6.png"/>
+   <img src="/images/git/img_6.png"/>
    
 c. 브런치 전환하기
    git checkout [브런치명]
    
    $ git checkout develop
-   <img src="../images/git/img_7.png"/>
+   <img src="/images/git/img_7.png"/>
    
 </pre>

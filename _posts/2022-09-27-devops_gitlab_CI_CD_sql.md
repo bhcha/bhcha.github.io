@@ -7,7 +7,7 @@ tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL
 
 ## 1. gitlab CI/CD로 SQL 실행하기
 결과물부터 먼저 보시죠.
-<img src="../images/devops/img_31.png"/>
+<img src="/images/devops/img_31.png"/>
 
 ## 2. 준비물
 ### 2.1 환경
@@ -35,20 +35,20 @@ b. /^develop_.*$/ 정규표현식에 맞는 브런치를 push한다.
    $ git push -uf origin develop_20220927
 
 c. ci/cd에서 결과물과 같이 sql이 각각 실행된다.
-   <img src="../images/devops/img_31.png"/>
+   <img src="/images/devops/img_31.png"/>
 
 d. developer는 merge requests를 요청한다.
-   <img src="../images/devops/img_32.png"/>
+   <img src="/images/devops/img_32.png"/>
 
 e. maintainer가 확인후 merge requests를 수락하면 commit된 sql들이 운영서버로 실행된다.
-   <img src="../images/devops/img_33.png"/>
+   <img src="/images/devops/img_33.png"/>
 </pre>
 
 ### 2.3 권한설정
 위 프로세스를 가능하게 하려면 관리자 권한과 개발자 권한을 분리해야 한다.
 gitlab > 프로젝트선택 > Project information > Members
 화면에서 권한 설정이 가능하다.
-<img src="../images/devops/img_34.png"/>
+<img src="/images/devops/img_34.png"/>
 
 ### 2.4 gitlab-ci.yml 파일 작성
 위 프로세스를 가능하게 만든 스크립트 이다. 필자의 부족한 리눅스 커맨드 실력으로 겨우겨우 만든거니 어느정도 감안하고 보길 바란다.

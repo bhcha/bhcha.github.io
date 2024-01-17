@@ -46,7 +46,7 @@ c. sql을 실행시킬 job
 
 ### 1.4 Docker Sqlplus 활용
 현재 환경은 아래와 같이 구성되어 있다.
-<img src="../images/devops/img_17.png"/>
+<img src="/images/devops/img_17.png"/>
 
 Case 1. Docker에서 Host Sqlplus활용
 
@@ -58,7 +58,7 @@ Case 1. Docker에서 Host Sqlplus활용
 a. Host 연결
    - host에 연결하기위해선 network 설정이 필요하다. 두가지 방법 중 하나 택1
      · vi /etc/hosts에서 host 추가
-       <img src="../images/devops/img_18.png"/>
+       <img src="/images/devops/img_18.png"/>
      · docker run 옵션에 호스트 추가
        옵션 : --add-host host.docker.internal:host-gateway \
        * https://bhcha.github.io/devops/devops_gitlab_%EC%84%A4%EC%B9%98_%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/#11-docker-gitlab-container-%EA%B5%AC%EC%B6%95
@@ -67,7 +67,7 @@ b. ssh 연결 테스트(Docker)
    - 도커 커맨드라인 연결
      $ docker exec -it gitlab /bin/bash 
    - $ ssh root/root1234@host.docker.internal
-     <img src="../images/devops/img_19.png"/>
+     <img src="/images/devops/img_19.png"/>
      root 비밀번호를 기재하였음에도 비밀번호를 물어본다.
 
 여기까지 작업했을때 CI/CD Job에서 shell command를 날렸을때 비밀번호를 물어보는거에 대한 대응이 힘들기 때문에 
@@ -88,19 +88,19 @@ c. ssh 비밀번호 없이 연결
      $ touch /root/.ssh/authorized_keys
      $ chmod 644 /root/.ssh/authorized_keys
      $ cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
-     <img src="../images/devops/img_20.png"/>
+     <img src="/images/devops/img_20.png"/>
 
 d. 다시 접속 테스트
-   <img src="../images/devops/img_21.png"/>
+   <img src="/images/devops/img_21.png"/>
    그러면 ssh를 통해서 커맨드를 날려보자.
    $ ssh root/root1234@host.docker.internal ls
    정상적으로 목록이 조회되는것을 확인할 수 있다. 그러면 여기에 sqlplus만 실행하면 끝!
    인줄 알았으나 커맨드를 찾을수 없다고 나온다. 
-   <img src="../images/devops/img_22.png"/>
+   <img src="/images/devops/img_22.png"/>
    host에서는 잘되는데 말이다.
-   <img src="../images/devops/img_23.png"/>
+   <img src="/images/devops/img_23.png"/>
    그래서 절대경로로 실행해 보았다.
-   <img src="../images/devops/img_24.png"/>
+   <img src="/images/devops/img_24.png"/>
    이런 메세지가 나타나며 실패했다. 환경변수가 셋팅도 제대로 되어있는데 끝끝내 성공하지 못했다.
 </pre>
 
@@ -125,11 +125,11 @@ Case 2. Docker sqlplus 설치
       $ export PATH=$ LD_LIBRARY_PATH:$ PATH
       $ source ~/.bashrc
    f. sqlplus 실행(실패)
-      <img src="../images/devops/img_25.png"/>
+      <img src="/images/devops/img_25.png"/>
    g. 당황하지 말고 libaio 설치
       $ apt-get install libaio1 libaio-dev
    h. sqlplus 실행(성공)
-      <img src="../images/devops/img_26.png"/>
+      <img src="/images/devops/img_26.png"/>
 </pre>
 
 ### 1.5 Sqlplus 원격접속
@@ -144,7 +144,7 @@ Case 2. Docker sqlplus 설치
 
    c. 원격접속후 sql실행
    $ sqlplus [ID]/[PASSWORD]@[IP]:1521/[SID] @test.sql
-   <img src="../images/devops/img_28.png"/>
+   <img src="/images/devops/img_28.png"/>
 
    성공!
 </pre>
