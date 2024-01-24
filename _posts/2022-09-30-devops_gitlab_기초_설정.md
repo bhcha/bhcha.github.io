@@ -22,6 +22,7 @@ gitlab을 활용해보기 앞서 기본적인 설정을 해보자.
 
 ### 2.2 멤버 role 설정
 <img src="/images/devops/img_39.png"/>
+
 <pre>
 // All
 Owner : 프로젝트 생성자.
