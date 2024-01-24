@@ -12,10 +12,12 @@ gitlab을 활용해보기 앞서 기본적인 설정을 해보자.
 
 ## 2. 프로젝트 멤버관리
 <img src="/images/devops/img_37.png"/>
+
 프로젝트 선택 > Project > Members
 
 ### 2.1 멤버 추가
 <img src="/images/devops/img_38.png"/>
+
 우측상단 Invite members 선택
 
 ### 2.2 멤버 role 설정
