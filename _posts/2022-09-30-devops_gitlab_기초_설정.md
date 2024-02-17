@@ -3,6 +3,7 @@ layout: single
 title: DevOps_Gitlab 기초설정
 categories: Devops
 tag: [gitlab기초, DEVOPS, gitlab]
+toc: true
 ---
 
 gitlab을 활용해보기 앞서 기본적인 설정을 해보자.

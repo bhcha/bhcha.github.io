@@ -3,6 +3,7 @@ layout: single
 title: obsidian 추천플러그인 Excalidraw 
 categories: info
 tag: [obsidian, Excalidraw]
+toc: true
 ---
 
 obsidian에서 Excalidraw를 쓰다보면 도형이 너무 부족하다는 걸 느낀다.  

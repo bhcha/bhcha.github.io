@@ -3,6 +3,7 @@ layout: single
 title: DevOps_Gitlab Dokcer Compose
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, docker compose]
+toc: true
 ---
 
 > 다시 처음부터 시작한다. 이전포스팅은 글쓴게 아까워 남겨놓기로 했다. 완전한 실패라고 보기는 어렵고 과정을 통해 느낌바가 있으니

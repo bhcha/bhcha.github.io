@@ -3,6 +3,7 @@ layout: single
 title: 느즈막히 시작하는 git(remote)
 categories: beginner
 tag: [git, sourcetree]
+toc: true
 ---
 
 ## 1. 원격 저장소

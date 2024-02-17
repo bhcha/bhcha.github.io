@@ -3,6 +3,7 @@ layout: single
 title: DevOps_Gitlab 활용(MR)
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL, gitlab mr]
+toc: true
 ---
 
 ## 1. 프로젝트에 MR(Merge request) 활용하기

@@ -94,10 +94,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : "GTM-N3RZ5CZR"
-    anonymize_ip         : false
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
 
 
 # Site Author
@@ -256,15 +256,15 @@ tag_archive:
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
- enabled:
-   - categories
-   - tags
- layouts:
-   category: archive-taxonomy
-   tag: archive-taxonomy
- permalinks:
-   category: /categories/:name/
-   tag: /tags/:name/
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
