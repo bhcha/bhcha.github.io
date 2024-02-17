@@ -3,6 +3,7 @@ layout: single
 title: DevOps_Gitlab설치
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
+toc: true
 ---
 
 > 해당작업은 Container 운영에 대한 이해도가 없이 진행하다 보니 다하고 뒤엎었다. 결국 docker-compose로 
