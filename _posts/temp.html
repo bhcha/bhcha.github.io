@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const userList = [
+            {name: '홍길동', age: 18},
+            {name: '임꺽정', age: 30},
+            {name: '나예리', age: 16},
+            {name: '하니', age: 16}
+        ];
+
+        // 미성년자 필터링
+        const minorUsers = userList.filter(user => user.age < 18);
+
+        // 미성년자 수
+        const numberOfMinors = minorUsers.length;
+
+        // 미성년자의 나이 합 계산
+        const sumOfAgesOfMinors = minorUsers.reduce((sum, user) => sum + user.age, 0);
+
+        console.log("미성년자 수:", numberOfMinors);
+        console.log("미성년자의 나이 합:", sumOfAgesOfMinors);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
