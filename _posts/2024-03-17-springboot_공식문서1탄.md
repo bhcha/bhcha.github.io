@@ -72,10 +72,12 @@ public class BhchaApplication {
 
 ## 3. Try it - 실행
 ### 1) 터미널 실행
-단축키 : mac > option + f12  
-       window > Ctrl + f12  
-명령어 실행 : mac > ./gradlew bootRun  
-           window > .\gradlew.bat bootRun  
+```shell
+# mac 터미널 실행 단축키
+option + f12   
+# gradle 실행 커맨드 
+./gradlew bootRun
+``` 
 
 ### 2) IntelliJ 버튼으로 실행
 <img src="/images/spring/img.png" alt="">  

@@ -88,12 +88,14 @@ public class GreetingController {
 ```
 
 심플한데 많은 기능이 부여되어 있다. 
-### 1. `@GetMapping`어노테이션은 /greeting에 대한 HTTP GET 요청이 greeting() 메서드에 매핑하는 역할이다.
-> Post방식을 이용하려면 `@PostMapping`를 모두를 파생하며 동의어 역할을 하는 `@RequestMapping` 어노테이션도 있다. get방식으로 사용하려면 `@RequestMapping(메서드=GET)`
-### 2. `@RequestParam`는 파라미터로 'name'을 받겠다는 의미이며 값이 없으면 World로 치환해서 이용하겠다는 의미이다.
-### 3. `@RestController`는 `@Controller`와 `@ResponseBody`를 모두 포함하기 위한 약어이다.
-> <span style="color:red">* </span> `@Controller`는 MVC에서 C에 해당하는 내용으로 차후 MVC를 보면서 따로 알아보고 `@ResponseBody`는 요청의 response의 body에 해당 내용을 실어보내기 위한 어노테이션이다.
-### 4. 별도 JSON으로 변환할 필요는 없다. Jackson 2가 포함되어 있어 Spring의 [MappingJackson2HttpMessageConverter](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html)가 자동으로 선택되어 Greeting 인스턴스를 JSON으로 변환한다.
+### 1) `@GetMapping`어노테이션은 /greeting에 대한 HTTP GET 요청이 greeting() 메서드에 매핑하는 역할이다.
+> Post방식을 이용하려면 `@PostMapping`를 모두를 파생하며 동의어 역할을 하는 `@RequestMapping` 어노테이션도 있다. get방식으로 사용하려면 `@RequestMapping(메서드=GET)`  
+
+### 2) `@RequestParam`는 파라미터로 'name'을 받겠다는 의미이며 값이 없으면 World로 치환해서 이용하겠다는 의미이다.
+### 3) `@RestController`는 `@Controller`와 `@ResponseBody`를 모두 포함하기 위한 약어이다.
+> <span style="color:red">* </span> `@Controller`는 MVC에서 C에 해당하는 내용으로 차후 MVC를 보면서 따로 알아보고 `@ResponseBody`는 요청의 response의 body에 해당 내용을 실어보내기 위한 어노테이션이다.  
+
+### 4) 별도 JSON으로 변환할 필요는 없다. Jackson 2가 포함되어 있어 Spring의 [MappingJackson2HttpMessageConverter](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/converter/json/MappingJackson2HttpMessageConverter.html)가 자동으로 선택되어 Greeting 인스턴스를 JSON으로 변환한다.
 
 
 * 현재까지의 폴더 구조  
@@ -101,16 +103,40 @@ public class GreetingController {
 
 ## 3. Try it - 실행
 ### 1) 터미널 실행
-단축키 : mac > option + f12  
-window > Ctrl + f12  
-명령어 실행 : mac > ./gradlew bootRun  
-window > .\gradlew.bat bootRun
+단축키 : mac > option + f12
+명령어 실행 : mac > ./gradlew bootRun
 
 ### 2) IntelliJ 버튼으로 실행
 <img src="/images/spring/img.png" alt="">  
 버튼을 눌러 실행  
 
 ### 3) 배포 파일로 만들어 실행
-#### 가. 터미널을 이용하여 배포파일 생성
-  
-#### 나. intelliJ를 이용하여 배포파일 생성
+a. 터미널 실행  
+```shell
+# mac 터미널 실행 단축키
+option + f12   
+# gradle build 커맨드 
+./gradlew build
+```
+
+
+<span style="color:red">* </span> intelliJ를 이용하여 배포파일 생성  
+<img src="/images/spring/img_7.png" alt="">
+
+* 파일 경로  
+  <img src="/images/spring/img_6.png" alt="">
+
+
+b. Java파일 실행    
+```shell
+java -jar build/libs/프로젝트명-0.1.0.jar
+```
+
+
+## 4. Test the Service - 서비스 테스트
+```
+http://localhost:8080/greeting?name=User
+```
+?namme=User와 같은 querystring은 `@RequestParam`의 값으로 전달된다.  
+* 결과  
+  <img src="/images/spring/img_8.png" alt="">
