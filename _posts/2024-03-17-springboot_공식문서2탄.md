@@ -10,7 +10,7 @@ toc: true
 ---
 
 > [이전 : quickstart](../springboot_공식문서1탄)
-> 
+ 
 
 > <span style="color:red">* </span> 표시는 공식문서에는 없는 첨언이다.
 
@@ -135,8 +135,11 @@ java -jar build/libs/프로젝트명-0.1.0.jar
 
 ## 4. Test the Service - 서비스 테스트
 ```
-http://localhost:8080/greeting?name=User
+http://localhost:8080/greeting?name=bhcha
 ```
-?namme=User와 같은 querystring은 `@RequestParam`의 값으로 전달된다.  
+?name=bhcha와 같은 querystring은 `@RequestParam`에 값으로 전달된다.  
 * 결과  
   <img src="/images/spring/img_8.png" alt="">
+
+
+[//]: # (> [다음 : Consuming a RESTful Web Service]&#40;../springboot_공식문서3탄&#41;)
