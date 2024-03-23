@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Spring Boot - 공식문서 보며 따라하는 스프링부트(1탄 - Quickstart)
+title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트(1탄 - Quickstart)
 categories: Spring
 tag: [Java, SpringBoot, IntelliJ, Java17, Spring3.2]
 toc: true
@@ -16,8 +16,6 @@ toc: true
 현재 본인팀의 상황은 점진적인 마이그레이션이나 차세대프로젝트가 불가능한 상황이라 플랫폼으로 구축하여 분산하는 전략을 세웠다. 
 * 사실 아무도 하자고한것도 아니고 혼자 끄적그리면서 혼자 공부겸 조금씩 해보려 한다. 그래서 블로그에 먼저 정리하면서 해보고 잘될것 같으면 회사에서 수면위로 올리고 아니면 드랍할 예정이다.
 
-> <span style="color:red">* </span> 표시는 공식문서에는 없는 첨언이다.
-
 > reference : spring.io > [quickstart](https://spring.io/quickstart)  
 > IDE : IntelliJ  
 > Java : 17  
@@ -25,7 +23,8 @@ toc: true
 > Build Tool : Gradle
 
 
-
+## 0. What You Will Build - 구축할 내용
+<img src="/images/spring/img_10.png" alt="">
 
 ## 1. Start a new Spring Boot project - 새 Spring Boot 프로젝트 시작
 ### 1) IntelliJ > New Project > Spring Initializr  
