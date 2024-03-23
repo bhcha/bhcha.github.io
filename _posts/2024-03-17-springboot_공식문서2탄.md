@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Spring Boot - 공식문서 보며 따라하는 스프링부트(2탄 - Building a RESTful Web Service)
+title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트2탄 - Building a RESTful Web Service)
 categories: Spring
 tag: [Java, SpringBoot, IntelliJ, Java17, Spring3.2]
 toc: true
@@ -10,9 +10,6 @@ toc: true
 ---
 
 > [이전 : quickstart](../springboot_공식문서1탄)
- 
-
-> <span style="color:red">* </span> 표시는 공식문서에는 없는 첨언이다.
 
 > reference : spring.io > [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service)  
 > IDE : IntelliJ  
@@ -23,6 +20,7 @@ toc: true
 
 
 ## 0. What You Will Build - 구축할 내용
+<img src="/images/spring/img_11.png">  
 
 이렇게 호출하면
 ```
