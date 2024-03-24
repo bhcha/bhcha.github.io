@@ -113,4 +113,4 @@ public class ConsumingRestApplication {
 실행시키면 [quoters프로젝트]의 `/api/random`를 호출하여 Quote에 할당해준다. 이것을 `RestTemplate`을 이용 하는것이 이번작업이다.
 
 flutter를 공부할때 공식문서를 보고 굉장히 재밌게 해서 간만에 스프링부트 공부하는거 인강 같은걸 안보고 해보자는 의미에서 공식문서를 보는데 생각보다 별로인것 같다.
-남은 database, security, restdoc까지만 정리할듯
+남은 database, security, restdoc까지만 정리해야겠다.

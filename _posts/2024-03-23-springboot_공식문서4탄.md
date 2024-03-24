@@ -17,9 +17,11 @@ toc: true
 > Spring : 3.2  
 > Build Tool : Gradle
 
+## Before starting
+DB가 필요하여 미뤄뒀던 [오라클클라우드](../../cloud/cloud_오라클클라우드)를 가입 하여 DB를 설치해서 연결해보기로 했다.
 
 
 ## 0. What You Will Build - 구축할 내용
 <img src="/images/spring/img_13.png">  
 
-MySQL 데이터베이스를 만들고 Spring 애플리케이션을 빌드한 다음 새로 만든 데이터베이스에 연결합니다.
+MySQL 데이터베이스를 만들고 Spring 애플리케이션을 빌드한 다음 새로 만든 데이터베이스에 연결해보자.
