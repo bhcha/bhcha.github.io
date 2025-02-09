@@ -19,7 +19,7 @@ tag: [sm, web, fetch, java, oracle CPU]
 3. 직원분께서 우선 DB에 저장했다가 Java 배치를 돌리며 업체에 발송하는 프로세스로 변경<span style="color:red">(실패)</span> 
 
 
-ajax는 대충 아래와 같이 구축되어 있었다.
+원래 전송하던 방식인 ajax부터 먼저 살펴봐야 한다.
 ```javascript
 let params = {
     userid : 'bhcha',
@@ -49,8 +49,8 @@ doAjax();
 httpPost.setHeader("Content-Type", "application/json;charset=UTF-8");
 ```
 
-충분히 헷갈릴 수 있는 부분이다. 당신이 주니어라면 말이다...~~하지만 당신은 주니어가 아닌걸~~  
-ajax가 아닌 fetch를 이용할때도 흔히들 하는 실수인데 fetch로 비슷하게 구현해보면 아래와 같다.
+충분히 헷갈릴 수 있는 부분이다. 주니어라면 말이다...~~하지만 주니어가 아니라면,,,~~  
+웹 프로그램할때 javascript에서 ajax가 아닌 fetch를 이용할때도 흔히들 하는 실수인데 fetch로 비슷하게 구현해보면 아래와 같다.
 
 ```javascript
 let params = {
@@ -75,15 +75,19 @@ function doFetch() {
 doFetch();
 ```
 
+같은 통신 방법을 사용했다고 생각이 들겠지만 java에서 request값을 정상적으로 받아오지 못할것이다. 이럴때 크롬 개발자 도구중 network를 활용해보자.
+
+ajax와 fetch로 발송할때 차이는 아래와 같다.  
 ### ajax로 발송할때
 <img src="/images/sm/img_2.png" style="width: 70%">  
 
 ### fetch로 발송할때
 <img src="/images/sm/img_3.png" style="width: 70%">
 
-눈여겨 봐야 할곳은 content-type이다. ajax, fetch 둘 다 `application/json` 선언하여 발송되는 컨텐츠의 타입이 다르게 발송된다. 
+눈여겨 봐야 할곳은 content-type이다. ajax, fetch 둘 다 `application/json` 선언하여 발송하지만 컨텐츠의 타입은 다르게 발송된다. 
 이때 spring에서 `@RequestParam annotation`이나 `HttpServletRequest를 이용하여 getParameter`를 했을경우 ajax, fetch 두개의 예제는 
-다르게 수신된다. 요즘도 이렇게 코딩을 하는지 모르겠지만 예전 레거시 시스템들의 경우 아래와 같이 request를 map으로 만드는 경우가 많았다.
+다르게 수신된다. fetch를 이용했을때는 body에 값들이 들어가기에 실제로 수신받지 못한다.  
+요즘도 이렇게 코딩을 하는지 모르겠지만 예전 레거시 시스템들의 경우 아래와 같이 request 순환하며 읽으며 map으로 만드는 경우가 많았다.
 
 ```java
 public static Map<String, String> extractParameters(HttpServletRequest request) {
@@ -99,5 +103,5 @@ public static Map<String, String> extractParameters(HttpServletRequest request) 
     return parametersMap;
 }
 ```
-해당 소스에서는 fetch나 httpclient의 content-type을 `application/json`로 발송했을 경우 값이 전달되지 않는다.  
+이렇게 구성 되어 있는 백엔드에 **'fetch의 body'**나 **'httpclient의 content-type'**을 `application/json`로 발송했을 경우 값이 전달되지 않는다.  
 아마 업체에서는 이런식으로 수신 받고 있었을 것이고 우리직원분은 계속 `application/json` 이렇게 발송하고 있었던 것이었다.

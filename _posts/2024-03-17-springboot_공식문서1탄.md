@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트(1탄 - Quickstart)
+title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트 1탄 - Quickstart
 categories: Spring
 tag: [Java, SpringBoot, IntelliJ, Java17, Spring3.2]
 toc: true
@@ -63,10 +63,10 @@ public class BhchaApplication {
 
 <span style="color:red">* </span> 공식문서에서는 restful에 포함되는 내용이나 첫설명에 포함하는게 좋을것 같아 포함시켰다.
 
-#### **`@SpringBootApplication` 어노테이션은 아래 내용들을 포함하는 어노테이션이다.**
-##### 1. `@Configuration` 애플리케이션 컨텍스트에 대한 빈 정의의 소스로서 클래스에 태그를 지정합니다.
-##### 2. `@EnableAutoConfiguration` : 클래스 경로 설정, 기타 빈 및 다양한 속성 설정을 기반으로 빈 추가를 시작하도록 Spring Boot에 알립니다. 예를 들어, spring-webmvc가 클래스 경로에 있는 경우 이 어노테이션은 애플리케이션을 웹 애플리케이션으로 플래그를 지정하고 DispatcherServlet 설정과 같은 주요 동작을 활성화합니다.
-##### 3. `@ComponentScan` : com/example 패키지에서 다른 컴포넌트, 구성 및 서비스를 찾아 컨트롤러를 찾을 수 있도록 Spring에 지시합니다.
+* `@SpringBootApplication` 어노테이션은 아래 내용들을 포함하는 어노테이션이다.  
+* `@Configuration` 애플리케이션 컨텍스트에 대한 빈 정의의 소스로서 클래스에 태그를 지정합니다.
+* `@EnableAutoConfiguration` : 클래스 경로 설정, 기타 빈 및 다양한 속성 설정을 기반으로 빈 추가를 시작하도록 Spring Boot에 알립니다. 예를 들어, spring-webmvc가 클래스 경로에 있는 경우 이 어노테이션은 애플리케이션을 웹 애플리케이션으로 플래그를 지정하고 DispatcherServlet 설정과 같은 주요 동작을 활성화합니다.
+* `@ComponentScan` : com/example 패키지에서 다른 컴포넌트, 구성 및 서비스를 찾아 컨트롤러를 찾을 수 있도록 Spring에 지시합니다.
 
 
 ## 3. Try it - 실행
