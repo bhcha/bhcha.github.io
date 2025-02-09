@@ -1,7 +1,7 @@
 ---
 layout: single
 title: 느즈막히 시작하는 git(local)
-categories: beginner
+categories: info
 tag: [git, sourcetree]
 toc: true
 ---
