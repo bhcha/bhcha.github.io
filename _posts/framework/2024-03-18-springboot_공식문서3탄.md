@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트 3탄 - Consuming a RESTful Web Service
-categories: Spring
+categories: framework
 tag: [Java, SpringBoot, IntelliJ, Java17, Spring3.2]
 toc: true
 #author_profile: false
