@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab 활용(MR)
+title: 🔄DevOps_Gitlab 활용(MR)
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL, gitlab mr]
 toc: true

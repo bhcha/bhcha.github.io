@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트 2탄 - Building a RESTful Web Service
+title: 🏗Spring Boot - 공식문서(Quickstart)로 살펴보는 스프링부트 2탄 - Building a RESTful Web Service
 categories: framework
 tag: [Java, SpringBoot, IntelliJ, Java17, Spring3.2]
 toc: true

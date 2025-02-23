@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 느즈막히 시작하는 git(remote)
+title: 🧐느즈막히 시작하는 git(remote)
 categories: info
 tag: [git, sourcetree]
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab CI/CD
+title: 🔄DevOps_Gitlab CI/CD
 categories: Devops
 tag: [gitlab기초, DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, 내부통제]
 toc: true

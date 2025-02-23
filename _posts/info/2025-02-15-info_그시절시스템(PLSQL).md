@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 201x년도 시스템 - PLSQL
+title: 🧐201x년도 시스템 - PLSQL
 categories: info
 tag: [그때그시절]
 toc: true

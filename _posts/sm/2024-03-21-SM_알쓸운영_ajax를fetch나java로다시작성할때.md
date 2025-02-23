@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 알쓸운영 - jquery ajax통신 프로젝트를 fetch나 java로 재구현할때
+title: 💼알쓸운영 - jquery ajax통신 프로젝트를 fetch나 java로 재구현할때
 categories: SM
 tag: [sm, web, fetch, java, oracle CPU]
 #toc: true
