@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 로지텍 Mx Keys for mac 윈도우에서 사용하기(레지스트리변경) 
+title: 🧐로지텍 Mx Keys for mac 윈도우에서 사용하기(레지스트리변경) 
 categories: info
 tag: [키보드]
 toc: true

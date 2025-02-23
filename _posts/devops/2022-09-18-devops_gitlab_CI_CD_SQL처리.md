@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab CI/CD로 SQL 처리
+title: 🔄DevOps_Gitlab CI/CD로 SQL 처리
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, oracle sql, sqlplus 설치]
 toc: true

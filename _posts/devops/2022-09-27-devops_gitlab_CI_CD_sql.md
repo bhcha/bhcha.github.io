@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab CI/CD로 SQL 실행
+title: 🔄DevOps_Gitlab CI/CD로 SQL 실행
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd sql, 내부통제, SQL]
 toc: true

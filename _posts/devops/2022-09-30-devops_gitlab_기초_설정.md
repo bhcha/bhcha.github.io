@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab 기초설정
+title: 🔄DevOps_Gitlab 기초설정
 categories: Devops
 tag: [gitlab기초, DEVOPS, gitlab]
 toc: true

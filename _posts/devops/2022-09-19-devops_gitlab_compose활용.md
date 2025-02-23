@@ -1,6 +1,6 @@
 ---
 layout: single
-title: DevOps_Gitlab Dokcer Compose
+title: 🔄DevOps_Gitlab Dokcer Compose
 categories: Devops
 tag: [DEVOPS, gitlab, docker, gitlab runner, gitlab ci/cd, docker compose]
 toc: true
