@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "257eeb95892d4f4e",
+    "type": "split",
+    "children": [
+      {
+        "id": "796f92ab064e9c8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e256361687cff6d5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fbf19bef03585db9",
+    "type": "split",
+    "children": [
+      {
+        "id": "3eee53c2a57e01e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "461d97608e4b7d0f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "48dca7ccd9b27c7b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b31952ea1eb64eda",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b1088bba6fa508eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3b68c3d8a5a4fd0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a332a44c16739fdd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/pm/2025-02-26-프로젝트관리_PM과기획.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025-02-26-프로젝트관리_PM과기획"
+            }
+          },
+          {
+            "id": "d429ecbe74e720f6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/pm/2025-02-26-프로젝트관리_PM과기획.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025-02-26-프로젝트관리_PM과기획"
+            }
+          },
+          {
+            "id": "ec6fe4272cc7ad6c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6b7094dfe9993d84",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/pm/2025-02-26-프로젝트관리_PM과기획.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2025-02-26-프로젝트관리_PM과기획"
+            }
+          },
+          {
+            "id": "eaa4464c4aba73db",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "e256361687cff6d5",
+  "lastOpenFiles": [
+    "_posts/pm/2025-02-26-프로젝트관리_PM과기획.md",
+    "_site/code/code_함수형프로그래밍(선언형)/index.html",
+    "_site/code/code_함수형프로그래밍(선언형)",
+    "_posts/code/2025-03-01-code_함수형프로그래밍(선언형).md",
+    "_site/pm/프로젝트관리_PM과기획(예제)/index.html",
+    "_site/pm/프로젝트관리_PM과기획(예제)",
+    "_posts/pm/2025-02-27-프로젝트관리_PM과기획(예제).md",
+    "_posts/pm/2025-02-26-프로젝트관리_PM과기획(예제).md"
+  ]
+}
