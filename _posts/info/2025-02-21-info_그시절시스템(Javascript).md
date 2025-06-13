@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 🧐201x년도 시스템 - 백엔드  
+title: 🧐201x년도 시스템 - view  
 categories: info
 tag: [그때그시절]
 toc: true
