@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "796f92ab064e9c8b",
+        "id": "bafb8f71b7c64ecf",
         "type": "tabs",
         "children": [
           {
-            "id": "e256361687cff6d5",
+            "id": "b689b0eb96811fc7",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,7 +176,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e256361687cff6d5",
+  "active": "b689b0eb96811fc7",
   "lastOpenFiles": [
     "_posts/pm/2025-02-26-프로젝트관리_PM과기획.md",
     "_site/code/code_함수형프로그래밍(선언형)/index.html",
